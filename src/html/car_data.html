@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('../include/head.html')
+</head>
+<body>
+	@@include('../include/header.html')
+	<div class="wrapper">
+		@@include('../include/nav.html')
+        <div class="main">
+            <div class="sub_nav">
+                <a>데이터 조회</a> > <a class="current">차량 이벤트 로깅 조회</a>
+            </div>
+            <main class="content car_data_content">
+                <div class="container-fluid p-0">
+
+                    <h1 class="h3 mb-3">차량 이벤트 로깅 조회</h1>
+
+                    <div class="form_group_wrap">
+                        <h2>조회조건</h2>
+                        <div class="col-12">
+                            <div class="section_body">
+                                <div class="form-horizontal">
+                                    <div class="form_group row">
+                                        <div class="form_label essential col-2">
+                                            <label>조회 기간</label>
+                                        </div>
+                                        <div class="flex col-auto">
+                                            <div class="form_input">
+                                                <svg width="16" height="16" fill="currentColor"
+                                                    viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M12.333 1.333H12V1a1 1 0 1 0-2 0v.333H6V1a1 1 0 1 0-2 0v.333h-.333A3.671 3.671 0 0 0 0 5v7.333A3.671 3.671 0 0 0 3.667 16h8.666A3.671 3.671 0 0 0 16 12.333V5a3.671 3.671 0 0 0-3.667-3.667Zm0 12.667H3.667C2.747 14 2 13.252 2 12.333V6h12v6.333c0 .919-.747 1.667-1.667 1.667ZM6.667 8.333v1.334a1 1 0 0 1-1 1H4.333a1 1 0 0 1-1-1V8.333a1 1 0 0 1 1-1h1.334a1 1 0 0 1 1 1Z" />
+                                                </svg>
+                                                <input type="text" class="filter_search datepicker_input"
+                                                    placeholder="시작일 입력" value="2023.07.26 13:31:42">
+
+                                                <div class='date-view'>
+                                                    <div class='date-view-wrap'>
+                                                        <div class='date-view-hd'>
+                                                            <button type='button' class='datepicker_arrow arrowPrevBtn'>
+                                                                <svg focusable="false" aria-hidden="true"
+                                                                    viewBox="0 0 24 24">
+                                                                    <path
+                                                                        d="M17.77 3.77 16 2 6 12l10 10 1.77-1.77L9.54 12z">
+                                                                    </path>
+                                                                </svg>
+                                                            </button>
+                                                            <div class='dropdown' aria-hidden='true'
+                                                                style='cursor: pointer;'>
+                                                                <button type='button' class='dropdown-btn'>
+                                                                    <p>2022</p>
+                                                                    <svg class="dropdown_arrow" focusable="false"
+                                                                        aria-hidden="true" viewBox="0 0 24 24">
+                                                                        <path d="m7 10 5 5 5-5z"></path>
+                                                                    </svg>
+                                                                </button>
+                                                                <ul class='drop-menu'>
+                                                                    <li class='drop-items' aria-hidden='true'>2019</li>
+                                                                    <li class='drop-items' aria-hidden='true'>2020</li>
+                                                                    <li class='drop-items' aria-hidden='true'>2021</li>
+                                                                    <li class='drop-items select' aria-hidden='true'>
+                                                                        2022</li>
+                                                                    <li class='drop-items' aria-hidden='true'>2023</li>
+                                                                    <li class='drop-items' aria-hidden='true'>2024</li>
+                                                                    <li class='drop-items' aria-hidden='true'>2025</li>
+                                                                    <li class='drop-items' aria-hidden='true'>2026</li>
+                                                                    <li class='drop-items' aria-hidden='true'>2027</li>
+                                                                    <li class='drop-items' aria-hidden='true'>2028</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class='dropdown' aria-hidden='true'
+                                                                style='cursor: pointer;'>
+                                                                <button type='button' class='dropdown-btn'>
+                                                                    <p><span>10</span>월</p>
+                                                                    <svg class="dropdown_arrow" focusable="false"
+                                                                        aria-hidden="true" viewBox="0 0 24 24">
+                                                                        <path d="m7 10 5 5 5-5z"></path>
+                                                                    </svg>
+                                                                </button>
+                                                                <ul class='drop-menu'>
+                                                                    <li class='drop-items' aria-hidden='true'>
+                                                                        <span>1</span>월</li>
+                                                                    <li class='drop-items' aria-hidden='true'>
+                                                                        <span>2</span>월</li>
+                                                                    <li class='drop-items' aria-hidden='true'>
+                                                                        <span>3</span>월</li>
+                                                                    <li class='drop-items' aria-hidden='true'>
+                                                                        <span>4</span>월</li>
+                                                                    <li class='drop-items' aria-hidden='true'>
+                                                                        <span>5</span>월</li>
+                                                                    <li class='drop-items' aria-hidden='true'>
+                                                                        <span>6</span>월</li>
+                                                                    <li class='drop-items' aria-hidden='true'>
+                                                                        <span>7</span>월</li>
+                                                                    <li class='drop-items' aria-hidden='true'>
+                                                                        <span>8</span>월</li>
+                                                                    <li class='drop-items' aria-hidden='true'>
+                                                                        <span>9</span>월</li>
+                                                                    <li class='drop-items select' aria-hidden='true'>
+                                                                        <span>10</span>월</li>
+                                                                    <li class='drop-items' aria-hidden='true'>
+                                                                        <span>11</span>월</li>
+                                                                    <li class='drop-items' aria-hidden='true'>
+                                                                        <span>12</span>월</li>
+                                                                </ul>
+                                                            </div>
+                                                            <button type='button' class='datepicker_arrow arrowNextBtn'>
+                                                                <svg focusable="false" aria-hidden="true"
+                                                                    viewBox="0 0 24 24">
+                                                                    <path
+                                                                        d="M6.23 20.23 8 22l10-10L8 2 6.23 3.77 14.46 12z">
+                                                                    </path>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                        <table class='date-view-cnt'>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>일</th>
+                                                                    <th>월</th>
+                                                                    <th>화</th>
+                                                                    <th>수</th>
+                                                                    <th>목</th>
+                                                                    <th>금</th>
+                                                                    <th>토</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style='cursor: default;'></td>
+                                                                    <td style='cursor: default;'></td>
+                                                                    <td style='cursor: default;'></td>
+                                                                    <td style='cursor: default;'></td>
+                                                                    <td style='cursor: default;'></td>
+                                                                    <td style='cursor: default;'></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>01</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>02</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>03</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>04</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>05</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>06</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>07</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>08</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>09</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>10</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>11</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>12</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>13</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>14</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>15</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>16</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>17</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>18</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>19</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>20</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>21</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>22</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>23</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>24</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>25</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>26</span></td>
+                                                                    <td class='select' aria-hidden='true'><span
+                                                                            class='date-num'>27</span></td>
+                                                                    <td class='disabled' aria-hidden='true'><span
+                                                                            class='date-num'>28</span></td>
+                                                                    <td class='disabled' aria-hidden='true'><span
+                                                                            class='date-num'>29</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class='disabled' aria-hidden='true'><span
+                                                                            class='date-num'>30</span></td>
+                                                                    <td class='disabled' aria-hidden='true'><span
+                                                                            class='date-num'>31</span></td>
+                                                                    <td style='cursor: default;'></td>
+                                                                    <td style='cursor: default;'></td>
+                                                                    <td style='cursor: default;'></td>
+                                                                    <td style='cursor: default;'></td>
+                                                                    <td style='cursor: default;'></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class='date-view-wrap'>
+                                                        <div class='date-view-cnt'>
+                                                            <ul class='date-time' id='date-time-container'>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>00</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>01</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>02</span>시</li>
+                                                                <li class='time-items select' aria-hidden='true'>
+                                                                    <span>03</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>04</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>05</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>06</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>07</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>08</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>09</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>10</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>11</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>12</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>13</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>14</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>15</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>16</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>17</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>18</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>19</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>20</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>21</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>22</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>23</span>시</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class='date-view-wrap'>
+                                                        <div class='date-view-cnt'>
+                                                            <ul class='date-time' id='date-time-container'>
+                                                                <li class='time-items select' aria-hidden='true'>
+                                                                    <span>00</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>01</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>02</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>03</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>04</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>05</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>06</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>07</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>08</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>09</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>10</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>11</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>12</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>13</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>14</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>15</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>16</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>17</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>18</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>19</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>20</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>21</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>22</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>23</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>24</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>25</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>26</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>27</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>28</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>29</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>30</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>31</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>32</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>33</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>34</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>35</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>36</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>37</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>38</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>39</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>40</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>41</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>42</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>43</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>44</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>45</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>46</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>47</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>48</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>49</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>50</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>51</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>52</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>53</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>54</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>55</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>56</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>57</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>58</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>59</span>분</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_text col-auto">
+                                                ~
+                                            </div>
+                                            <div class="form_input">
+                                                <svg class="icon_search" width="16" height="16" fill="currentColor"
+                                                    viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M12.333 1.333H12V1a1 1 0 1 0-2 0v.333H6V1a1 1 0 1 0-2 0v.333h-.333A3.671 3.671 0 0 0 0 5v7.333A3.671 3.671 0 0 0 3.667 16h8.666A3.671 3.671 0 0 0 16 12.333V5a3.671 3.671 0 0 0-3.667-3.667Zm0 12.667H3.667C2.747 14 2 13.252 2 12.333V6h12v6.333c0 .919-.747 1.667-1.667 1.667ZM6.667 8.333v1.334a1 1 0 0 1-1 1H4.333a1 1 0 0 1-1-1V8.333a1 1 0 0 1 1-1h1.334a1 1 0 0 1 1 1Z" />
+                                                </svg>
+                                                <input type="text" class="filter_search datepicker_input"
+                                                    placeholder="종료일 입력" value="2023.07.26 13:31:42">
+
+                                                <div class='date-view'>
+                                                    <div class='date-view-wrap'>
+                                                        <div class='date-view-hd'>
+                                                            <button type='button' class='datepicker_arrow arrowPrevBtn'>
+                                                                <svg focusable="false" aria-hidden="true"
+                                                                    viewBox="0 0 24 24">
+                                                                    <path
+                                                                        d="M17.77 3.77 16 2 6 12l10 10 1.77-1.77L9.54 12z">
+                                                                    </path>
+                                                                </svg>
+                                                            </button>
+                                                            <div class='dropdown' aria-hidden='true'
+                                                                style='cursor: pointer;'>
+                                                                <button type='button' class='dropdown-btn'>
+                                                                    <p>2022</p>
+                                                                    <svg class="dropdown_arrow" focusable="false"
+                                                                        aria-hidden="true" viewBox="0 0 24 24">
+                                                                        <path d="m7 10 5 5 5-5z"></path>
+                                                                    </svg>
+                                                                </button>
+                                                                <ul class='drop-menu'>
+                                                                    <li class='drop-items' aria-hidden='true'>2019</li>
+                                                                    <li class='drop-items' aria-hidden='true'>2020</li>
+                                                                    <li class='drop-items' aria-hidden='true'>2021</li>
+                                                                    <li class='drop-items select' aria-hidden='true'>
+                                                                        2022</li>
+                                                                    <li class='drop-items' aria-hidden='true'>2023</li>
+                                                                    <li class='drop-items' aria-hidden='true'>2024</li>
+                                                                    <li class='drop-items' aria-hidden='true'>2025</li>
+                                                                    <li class='drop-items' aria-hidden='true'>2026</li>
+                                                                    <li class='drop-items' aria-hidden='true'>2027</li>
+                                                                    <li class='drop-items' aria-hidden='true'>2028</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class='dropdown' aria-hidden='true'
+                                                                style='cursor: pointer;'>
+                                                                <button type='button' class='dropdown-btn'>
+                                                                    <p><span>10</span>월</p>
+                                                                    <svg class="dropdown_arrow" focusable="false"
+                                                                        aria-hidden="true" viewBox="0 0 24 24">
+                                                                        <path d="m7 10 5 5 5-5z"></path>
+                                                                    </svg>
+                                                                </button>
+                                                                <ul class='drop-menu'>
+                                                                    <li class='drop-items' aria-hidden='true'>
+                                                                        <span>1</span>월</li>
+                                                                    <li class='drop-items' aria-hidden='true'>
+                                                                        <span>2</span>월</li>
+                                                                    <li class='drop-items' aria-hidden='true'>
+                                                                        <span>3</span>월</li>
+                                                                    <li class='drop-items' aria-hidden='true'>
+                                                                        <span>4</span>월</li>
+                                                                    <li class='drop-items' aria-hidden='true'>
+                                                                        <span>5</span>월</li>
+                                                                    <li class='drop-items' aria-hidden='true'>
+                                                                        <span>6</span>월</li>
+                                                                    <li class='drop-items' aria-hidden='true'>
+                                                                        <span>7</span>월</li>
+                                                                    <li class='drop-items' aria-hidden='true'>
+                                                                        <span>8</span>월</li>
+                                                                    <li class='drop-items' aria-hidden='true'>
+                                                                        <span>9</span>월</li>
+                                                                    <li class='drop-items select' aria-hidden='true'>
+                                                                        <span>10</span>월</li>
+                                                                    <li class='drop-items' aria-hidden='true'>
+                                                                        <span>11</span>월</li>
+                                                                    <li class='drop-items' aria-hidden='true'>
+                                                                        <span>12</span>월</li>
+                                                                </ul>
+                                                            </div>
+                                                            <button type='button' class='datepicker_arrow arrowNextBtn'>
+                                                                <svg focusable="false" aria-hidden="true"
+                                                                    viewBox="0 0 24 24">
+                                                                    <path
+                                                                        d="M6.23 20.23 8 22l10-10L8 2 6.23 3.77 14.46 12z">
+                                                                    </path>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                        <table class='date-view-cnt'>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>일</th>
+                                                                    <th>월</th>
+                                                                    <th>화</th>
+                                                                    <th>수</th>
+                                                                    <th>목</th>
+                                                                    <th>금</th>
+                                                                    <th>토</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style='cursor: default;'></td>
+                                                                    <td style='cursor: default;'></td>
+                                                                    <td style='cursor: default;'></td>
+                                                                    <td style='cursor: default;'></td>
+                                                                    <td style='cursor: default;'></td>
+                                                                    <td style='cursor: default;'></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>01</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>02</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>03</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>04</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>05</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>06</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>07</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>08</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>09</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>10</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>11</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>12</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>13</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>14</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>15</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>16</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>17</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>18</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>19</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>20</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>21</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>22</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>23</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>24</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>25</span></td>
+                                                                    <td aria-hidden='true'><span
+                                                                            class='date-num'>26</span></td>
+                                                                    <td class='select' aria-hidden='true'><span
+                                                                            class='date-num'>27</span></td>
+                                                                    <td class='disabled' aria-hidden='true'><span
+                                                                            class='date-num'>28</span></td>
+                                                                    <td class='disabled' aria-hidden='true'><span
+                                                                            class='date-num'>29</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class='disabled' aria-hidden='true'><span
+                                                                            class='date-num'>30</span></td>
+                                                                    <td class='disabled' aria-hidden='true'><span
+                                                                            class='date-num'>31</span></td>
+                                                                    <td style='cursor: default;'></td>
+                                                                    <td style='cursor: default;'></td>
+                                                                    <td style='cursor: default;'></td>
+                                                                    <td style='cursor: default;'></td>
+                                                                    <td style='cursor: default;'></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class='date-view-wrap'>
+                                                        <div class='date-view-cnt'>
+                                                            <ul class='date-time' id='date-time-container'>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>00</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>01</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>02</span>시</li>
+                                                                <li class='time-items select' aria-hidden='true'>
+                                                                    <span>03</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>04</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>05</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>06</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>07</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>08</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>09</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>10</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>11</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>12</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>13</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>14</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>15</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>16</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>17</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>18</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>19</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>20</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>21</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>22</span>시</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>23</span>시</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class='date-view-wrap'>
+                                                        <div class='date-view-cnt'>
+                                                            <ul class='date-time' id='date-time-container'>
+                                                                <li class='time-items select' aria-hidden='true'>
+                                                                    <span>00</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>01</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>02</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>03</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>04</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>05</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>06</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>07</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>08</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>09</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>10</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>11</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>12</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>13</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>14</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>15</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>16</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>17</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>18</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>19</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>20</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>21</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>22</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>23</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>24</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>25</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>26</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>27</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>28</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>29</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>30</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>31</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>32</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>33</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>34</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>35</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>36</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>37</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>38</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>39</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>40</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>41</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>42</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>43</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>44</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>45</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>46</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>47</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>48</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>49</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>50</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>51</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>52</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>53</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>54</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>55</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>56</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>57</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>58</span>분</li>
+                                                                <li class='time-items' aria-hidden='true'>
+                                                                    <span>59</span>분</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_label essential col-10">
+                                            <div class="form_label essential col-2">
+                                                <button class="form_btn">실시간</button>
+                                                <button class="form_btn">1일</button>
+                                                <button class="form_btn">1주일</button>
+                                                <button class="form_btn">1개월</button>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_group row">
+                                        <div class="filter_wrap">
+                                            <div class="form_label essential col-2">
+                                                <label>이벤트 검색</label>
+                                            </div>
+                                            <div class="filter_wrap">
+                                                <svg viewBox="0 0 24 24" width="16" height="16"
+                                                    fill="currentColor">
+                                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                                    <path
+                                                        d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z">
+                                                    </path>
+                                                </svg>
+                                                <input type="search" autocomplete="off"
+                                                    placeholder="CCTV 설치 장소명, ID를 입력하세요">
+                                                <button class="btn_search" disabled>검색</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form_group_wrap">
+                        <h2 class="row_h2">ML 이벤트 로깅 리스트</h2>
+                        <div class="col-12">
+                            <section class="main_section">
+                                <div class="section_body">
+                                    <div class="table_area">
+                                        <div class="filter_area">
+                                            <div class="table_length">
+                                                총 <span>35</span> 건
+                                            </div>
+                                            <div class="table_action_wrap">
+                                                <button>삭제</button>
+                                                <span>출력개수</span>
+                                                <select data-trigger="" name="select_01"
+                                                    id="select_01">
+                                                    <option value="10">10개</option>
+                                                    <option value="20" selected>20개</option>
+                                                    <option value="50">50개</option>
+                                                    <option value="100">100개</option>
+                                                    <option value="200">200개</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="main_table">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th><input type='checkbox' name='check' value='selectall'
+                                                                onclick='selectAll(this)' /></th>
+                                                        <th>이벤트 ID</th>
+                                                        <th>발생 시간</th>
+                                                        <th>-</th>
+                                                        <th>-</th>
+                                                        <th>-</th>
+                                                        <th>-</th>
+                                                    </tr>
+                                                </thead> 
+                                                <tbody>
+                                                    <tr>
+                                                        <td><input type='checkbox' name='check' value='check' /></td>
+                                                        <td>5</td>
+                                                        <td>2023.09.14 12:29:31
+                                                        </td>
+                                                        <td>-
+                                                        </td>
+                                                        <td>-</td>
+                                                        <td>
+                                                            -
+
+                                                        </td>
+                                                        <td>
+                                                            -
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type='checkbox' name='check' value='check' /></td>
+                                                        <td>4</td>
+                                                        <td>2023.09.14 12:29:31
+                                                        </td>
+                                                        <td>-
+                                                        </td>
+                                                        <td>-</td>
+                                                        <td>
+                                                            -
+
+                                                        </td>
+                                                        <td>
+                                                            -
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type='checkbox' name='check' value='check' /></td>
+                                                        <td>3</td>
+                                                        <td>2023.09.14 12:29:31
+                                                        </td>
+                                                        <td>-
+                                                        </td>
+                                                        <td>-</td>
+                                                        <td>
+                                                            -
+
+                                                        </td>
+                                                        <td>
+                                                            -
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type='checkbox' name='check' value='check' /></td>
+                                                        <td>2</td>
+                                                        <td>2023.09.14 12:29:31
+                                                        </td>
+                                                        <td>-
+                                                        </td>
+                                                        <td>-</td>
+                                                        <td>
+                                                            -
+
+                                                        </td>
+                                                        <td>
+                                                            -
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type='checkbox' name='check' value='check' /></td>
+                                                        <td>1</td>
+                                                        <td>2023.09.14 12:29:31</td>
+                                                        <td>-
+                                                        </td>
+                                                        <td>-</td>
+                                                        <td>
+                                                            -
+
+                                                        </td>
+                                                        <td>
+                                                            -
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                                </table>
+                                        </div>
+                                    </div>
+
+                                    @@include('../include/pagenation.html')
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+            </main>
+
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="js/app.js"></script>
+    <script src="js/common.js"></script>
+
+</body>
+
+</html>

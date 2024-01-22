@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('../include/head.html')
+</head>
+<body>
+	@@include('../include/header.html')
+	<div class="wrapper">
+		@@include('../include/nav.html')
+		<div class="main">
+			<div class="sub_nav">
+				<a>설정 관리</a> > <a class="current">Default값 설정 관리</a>
+			</div>
+			<main class="content">
+				<div class="container-fluid p-0">
+					<h1>Default 값 설정 관리</h1>
+					<div class="row">
+						<h2 class="row_h2">Default 설정 리스트</h2>
+						<div class="col-12">
+							<section class="main_section">
+								<div class="section_body">
+									<div class="table_area">
+										<div class="main_table">
+											<table>
+												<colgroup>
+                                                    <col width="30%"/>
+                                                    <col width="30%"/>
+                                                    <col width="30%"/>
+                                                    <col width="10%"/>
+                                            </colgroup>
+												<thead>
+													<tr>
+														<th>Key</th>
+														<th>Value</th>
+														<th>Description</th>
+														<th>수정</th>
+													</tr>
+												</thead>
+												</table>
+												<div>
+													<table>
+														<colgroup>
+															<col width="30%"/>
+															<col width="30%"/>
+															<col width="30%"/>
+															<col width="9%"/>
+													</colgroup>
+												<tbody id="info">
+													<tr>
+														<td>openApiItsUrl
+														</td>
+														<td>https://openapi.its.go.kr:9443
+														</td>
+														<td>Open API ITS URL
+														</td>
+														<td class="fas fa-edit" onclick="modify_and_save(this)">
+															<svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+																xmlns="http://www.w3.org/2000/svg">
+																<path
+																	d="M10.0984 2.80369H4.4119C2.52756 2.80369 1 4.3312 1 6.21548V17.5882C1 19.4725 2.52756 21 4.4119 21H15.7849C17.6692 21 19.1968 19.4725 19.1968 17.5882L19.1968 11.9018M6.68649 15.3136L10.8244 14.4799C11.044 14.4356 11.2457 14.3274 11.4041 14.1689L20.6671 4.90116C21.1112 4.45682 21.1109 3.73657 20.6664 3.2926L18.7042 1.33264C18.2599 0.888856 17.54 0.889158 17.0961 1.33332L7.8321 10.6021C7.674 10.7602 7.56605 10.9615 7.52175 11.1807L6.68649 15.3136Z"
+																	stroke="black" stroke-width="2"
+																	stroke-linecap="round" stroke-linejoin="round" />
+															</svg>
+
+														</td>
+													</tr>
+													<tr>
+														<td contenteditable="false">openApiItsUrl
+														</td>
+														<td>https://openapi.its.go.kr:9443
+														</td>
+														<td>Open API ITS URL
+														</td>
+														<td class="fas fa-edit" onclick="modify_and_save(this)">
+															<svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+																xmlns="http://www.w3.org/2000/svg">
+																<path
+																	d="M10.0984 2.80369H4.4119C2.52756 2.80369 1 4.3312 1 6.21548V17.5882C1 19.4725 2.52756 21 4.4119 21H15.7849C17.6692 21 19.1968 19.4725 19.1968 17.5882L19.1968 11.9018M6.68649 15.3136L10.8244 14.4799C11.044 14.4356 11.2457 14.3274 11.4041 14.1689L20.6671 4.90116C21.1112 4.45682 21.1109 3.73657 20.6664 3.2926L18.7042 1.33264C18.2599 0.888856 17.54 0.889158 17.0961 1.33332L7.8321 10.6021C7.674 10.7602 7.56605 10.9615 7.52175 11.1807L6.68649 15.3136Z"
+																	stroke="black" stroke-width="2"
+																	stroke-linecap="round" stroke-linejoin="round" />
+															</svg>
+
+														</td>
+													</tr>
+													<tr>
+														<td>openApiItsUrl
+														</td>
+														<td>https://openapi.its.go.kr:9443
+														</td>
+														<td>Open API ITS URL
+														</td>
+														<td>
+															<svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+																xmlns="http://www.w3.org/2000/svg">
+																<path
+																	d="M10.0984 2.80369H4.4119C2.52756 2.80369 1 4.3312 1 6.21548V17.5882C1 19.4725 2.52756 21 4.4119 21H15.7849C17.6692 21 19.1968 19.4725 19.1968 17.5882L19.1968 11.9018M6.68649 15.3136L10.8244 14.4799C11.044 14.4356 11.2457 14.3274 11.4041 14.1689L20.6671 4.90116C21.1112 4.45682 21.1109 3.73657 20.6664 3.2926L18.7042 1.33264C18.2599 0.888856 17.54 0.889158 17.0961 1.33332L7.8321 10.6021C7.674 10.7602 7.56605 10.9615 7.52175 11.1807L6.68649 15.3136Z"
+																	stroke="black" stroke-width="2"
+																	stroke-linecap="round" stroke-linejoin="round" />
+															</svg>
+
+														</td>
+													</tr>
+													<tr>
+														<td>openApiItsUrl
+														</td>
+														<td>https://openapi.its.go.kr:9443
+														</td>
+														<td>Open API ITS URL
+														</td>
+														<td>
+															<svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+																xmlns="http://www.w3.org/2000/svg">
+																<path
+																	d="M10.0984 2.80369H4.4119C2.52756 2.80369 1 4.3312 1 6.21548V17.5882C1 19.4725 2.52756 21 4.4119 21H15.7849C17.6692 21 19.1968 19.4725 19.1968 17.5882L19.1968 11.9018M6.68649 15.3136L10.8244 14.4799C11.044 14.4356 11.2457 14.3274 11.4041 14.1689L20.6671 4.90116C21.1112 4.45682 21.1109 3.73657 20.6664 3.2926L18.7042 1.33264C18.2599 0.888856 17.54 0.889158 17.0961 1.33332L7.8321 10.6021C7.674 10.7602 7.56605 10.9615 7.52175 11.1807L6.68649 15.3136Z"
+																	stroke="black" stroke-width="2"
+																	stroke-linecap="round" stroke-linejoin="round" />
+															</svg>
+
+														</td>
+													</tr>
+													<tr>
+														<td>openApiItsUrl
+														</td>
+														<td>https://openapi.its.go.kr:9443
+														</td>
+														<td>Open API ITS URL
+														</td>
+														<td class="fas fa-edit" onclick="modify_and_save(this)">
+															<svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+																xmlns="http://www.w3.org/2000/svg">
+																<path
+																	d="M10.0984 2.80369H4.4119C2.52756 2.80369 1 4.3312 1 6.21548V17.5882C1 19.4725 2.52756 21 4.4119 21H15.7849C17.6692 21 19.1968 19.4725 19.1968 17.5882L19.1968 11.9018M6.68649 15.3136L10.8244 14.4799C11.044 14.4356 11.2457 14.3274 11.4041 14.1689L20.6671 4.90116C21.1112 4.45682 21.1109 3.73657 20.6664 3.2926L18.7042 1.33264C18.2599 0.888856 17.54 0.889158 17.0961 1.33332L7.8321 10.6021C7.674 10.7602 7.56605 10.9615 7.52175 11.1807L6.68649 15.3136Z"
+																	stroke="black" stroke-width="2"
+																	stroke-linecap="round" stroke-linejoin="round" />
+															</svg>
+
+														</td>
+													</tr>
+													<tr>
+														<td>openApiItsUrl
+														</td>
+														<td>https://openapi.its.go.kr:9443
+														</td>
+														<td>Open API ITS URL
+														</td>
+														<td>
+															<svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+																xmlns="http://www.w3.org/2000/svg">
+																<path
+																	d="M10.0984 2.80369H4.4119C2.52756 2.80369 1 4.3312 1 6.21548V17.5882C1 19.4725 2.52756 21 4.4119 21H15.7849C17.6692 21 19.1968 19.4725 19.1968 17.5882L19.1968 11.9018M6.68649 15.3136L10.8244 14.4799C11.044 14.4356 11.2457 14.3274 11.4041 14.1689L20.6671 4.90116C21.1112 4.45682 21.1109 3.73657 20.6664 3.2926L18.7042 1.33264C18.2599 0.888856 17.54 0.889158 17.0961 1.33332L7.8321 10.6021C7.674 10.7602 7.56605 10.9615 7.52175 11.1807L6.68649 15.3136Z"
+																	stroke="black" stroke-width="2"
+																	stroke-linecap="round" stroke-linejoin="round" />
+															</svg>
+
+														</td>
+													</tr>
+												</tbody>
+												</table>
+												</div>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+			</main>
+
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+	<script src="https://unpkg.com/tippy.js@6"></script>
+	<script src="js/app.js"></script>
+	<script src="js/common.js"></script>
+</body>
+
+</html>

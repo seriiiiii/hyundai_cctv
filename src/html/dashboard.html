@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('../include/head.html')
+</head>
+<body>
+	@@include('../include/header.html')
+	<div class="wrapper">
+		@@include('../include/nav.html')
+		<div class="main">
+			<div class="sub_nav">
+				<a><a class="current">Home</a>
+			</div>
+            <main class="content">
+                <div class="container-fluid p-0">
+                    <h1>Dashboard</h1>
+					<div class="dashboard_item">
+						<h2 class="row_h2">공공데이터 수집/가공 현황</h2>
+								<div class="dashboard_content_wrap">
+								
+									<div class="dashboard_content">
+										<div class="dash_card">
+											<div class="card-body">
+												<div class="row">
+													<div class="col mt-0">
+														<h3 class="card-title">타겟 cctv 수</h3>
+													</div>
+
+													<div class="col-auto">
+														<div class="stat text-primary">
+															<img src="styles/img/icons/atom.svg" alt="no">
+														</div>
+													</div>
+												</div>
+												<span class="mt-1 mb-3">30</span>
+											</div>
+										</div>
+									</div>
+									<div class="dashboard_content">
+										<div class="dash_card">
+											<div class="card-body">
+												<div class="row">
+													<div class="col mt-0">
+														<h3 class="card-title">이벤트 발생 수</h3>
+													</div>
+
+													<div class="col-auto">
+														<div class="stat text-primary">
+															<img src="styles/img/icons/atom.svg" alt="no">
+														</div>
+													</div>
+												</div>
+												<span class="mt-1 mb-3">70</span>
+											</div>
+										</div>
+									</div>
+									<div class="dashboard_content">
+										<div class="dash_card">
+											<div class="card-body">
+												<div class="row">
+													<div class="col mt-0">
+														<h3 class="card-title">cctv 모듈 수</h3>
+													</div>
+
+													<div class="col-auto">
+														<div class="stat text-primary">
+															<img src="styles/img/icons/atom.svg" alt="no">
+														</div>
+													</div>
+												</div>
+												<span class="mt-1 mb-3">70</span>
+											</div>
+										</div>
+									</div>
+									<div class="dashboard_content">
+										<div class="dash_card">
+											<div class="card-body">
+												<div class="row">
+													<div class="col mt-0">
+														<h3 class="card-title">이벤트 타입 수</h3>
+													</div>
+
+													<div class="col-auto">
+														<div class="stat text-primary">
+															<img src="styles/img/icons/atom.svg" alt="no">
+														</div>
+													</div>
+												</div>
+												<span class="mt-1 mb-3">30</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								</div>
+								<div class="dashboard_item">
+									<h2 class="row_h2">공공데이터 수집/가공 현황</h2>
+								<div class="dashboard_content_wrap">
+									<div class="dashboard_content">
+										<div class="card flex-fill w-100">
+											<div class="card-header">
+		
+												<h3 class="card-title mb-0">이벤트 발생 추이</h3>
+											</div>
+											<div class="card-body py-3">
+												<div class="chart chart-sm">
+													<canvas id="chartjs-dashboard-line"></canvas>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="dashboard_content">
+										<div class="card flex-fill w-100">
+											<div class="card-header">
+		
+												<h3 class="card-title mb-0">이벤트 타입 별 추이</h3>
+											</div>
+											<div class="card-body py-3">
+												<div class="chart chart-sm">
+													<canvas id="chartjs-dashboard-line"></canvas>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="js/app.js"></script>
+    <script src="js/common.js"></script>
+
+</body>
+
+</html>

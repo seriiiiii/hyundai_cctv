@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('../include/head.html')
+</head>
+
+<body>
+
+    <div class="modal modal-m open" data-modal="product_setting_modal">
+        <div class="modal_bg modal_close"></div>
+        <div class="modal_container hidden">
+            <div class="modal_content">
+                <div class="modal_header">
+                    <div class="modal_title">
+                        CCTV 미리보기
+                    </div>
+                    <button class="modal_header_btn modal_close">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 22.75C6.07 22.75 1.25 17.93 1.25 12C1.25 6.07 6.07 1.25 12 1.25C17.93 1.25 22.75 6.07 22.75 12C22.75 17.93 17.93 22.75 12 22.75ZM12 2.75C6.9 2.75 2.75 6.9 2.75 12C2.75 17.1 6.9 21.25 12 21.25C17.1 21.25 21.25 17.1 21.25 12C21.25 6.9 17.1 2.75 12 2.75Z"
+                                fill="#DFDFE6" />
+                            <path
+                                d="M9.16986 15.58C8.97986 15.58 8.78986 15.51 8.63986 15.36C8.34986 15.07 8.34986 14.59 8.63986 14.3L14.2999 8.63999C14.5899 8.34999 15.0699 8.34999 15.3599 8.63999C15.6499 8.92999 15.6499 9.40998 15.3599 9.69998L9.69986 15.36C9.55986 15.51 9.35986 15.58 9.16986 15.58Z"
+                                fill="#fff" />
+                            <path
+                                d="M14.8299 15.58C14.6399 15.58 14.4499 15.51 14.2999 15.36L8.63986 9.69998C8.34986 9.40998 8.34986 8.92999 8.63986 8.63999C8.92986 8.34999 9.40986 8.34999 9.69986 8.63999L15.3599 14.3C15.6499 14.59 15.6499 15.07 15.3599 15.36C15.2099 15.51 15.0199 15.58 14.8299 15.58Z"
+                                fill="#fff" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal_body">
+                    <section class="modal_section">
+                        <div class="modal_section_body">
+                            <div class="modal_section">
+                                <div class="modal_section_wrap">
+                                    <div class="modal_section_title">
+                                        장소명
+                                    </div>
+                                    <div class="modal_section_content">
+                                        [수도권제1순환선] 성남
+                                    </div>
+                                </div>
+                                <div class="modal_section_wrap">
+                                    <div class="modal_section_title">
+                                        도로유형
+                                    </div>
+                                    <div class="modal_section_content">
+                                        고속도로
+                                    </div>
+                                </div>
+                                <div class="modal_section_wrap">
+                                    <div class="modal_section_title">
+                                        경도
+                                    </div>
+                                    <div class="modal_section_content">
+                                        127.12361
+                                    </div>
+                                </div>
+                                <div class="modal_section_wrap">
+                                    <div class="modal_section_title">
+                                        위도
+                                    </div>
+                                    <div class="modal_section_content">
+                                        37.42889
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="modal_section">
+                        <div class="modal_video">
+                            <video muted autoplay loop>
+                                <source src="styles/img/videos/setting_ex.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video_modal_failed">
+                            <img src="styles/img/icons/err_1.svg" alt="no"/>
+                            <!--err_1 개발자도구에서 뒤 숫자만 바꿔서 확인해주세요 1~5-->
+                            <h2>요청실패</h2>
+                            <p>잘못된 요청으로 인증에 실패하였습니다.<br/>
+                                공유하기를 제공한 서비스로 문의하시기 바랍니다.
+                            </p>
+                            <span>자세히 보기</span>
+                        </div>
+                    </section>
+                </div>
+                <div class="modal_footer">
+                    <button class="btn_secondary modal_close">
+                        닫기
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('../include/header.html')
+    <div class="wrapper">
+        @@include('../include/nav.html')
+        <div class="main setting">
+            <div class="sub_nav">
+                <a>설정 관리 > <a class="current">타깃 CCTV 설정 관리</a>
+            </div>
+            <main class="content setting">
+                <div class="container-fluid p-0">
+
+                    <h1>CCTV 리스트 조회</h1>
+
+                        <div class="form_group_wrap">
+                            <h2>조회조건</h2>
+                            <div class="section_body">
+                                <div class="form-horizontal">
+                                    <div class="form_group row">
+                                        <div class="form_label essential col-2">
+                                            <label>필터 조건</label>
+                                        </div>
+                                        <div class="form_input col-10">
+                                            <div class="form_label essential col-2">
+                                                <button class="form_btn">전체</button>
+                                                <button class="form_btn">미지정 CCTV</button>
+                                                <button class="form_btn">타깃 CCTV</button>
+                                              </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="form_group row">
+                                        <div class="form_label essential col-2">
+                                            <label>도로 유형</label>
+                                        </div>
+                                        <div class="form_label essential col-2">
+                                            <button class="form_btn">전체</button>
+                                            <button class="form_btn">고속도로</button>
+                                            <button class="form_btn">국도</button>
+                                          </div>
+
+                                    </div>
+                                    <div class="form_group row">
+                                        <div class="filter_wrap">
+                                            <div class="form_label essential col-2">
+                                                <label>도로 유형</label>
+                                            </div>
+                                            <div class="filter_wrap">
+                                                <svg class="icon_search" viewBox="0 0 24 24" width="16" height="16"
+                                                    fill="currentColor">
+                                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                                    <path
+                                                        d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z">
+                                                    </path>
+                                                </svg>
+                                                <input class="search" type="search" autocomplete="off"
+                                                    placeholder="검색어를 입력하세요.">
+                                                    <button class="btn_search" disabled>검색</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="form_group_wrap">
+                        <h2>CCTV 리스트</h2>
+                        <div class="col-12">
+                            <section class="main_section">
+                                <div class="section_body">
+
+
+                                    <div class="table_area">
+                                        <div class="filter_area">
+                                            <div class="table_length">
+                                                총 <span>35</span> 건
+                                            </div>
+                                            <div class="table_action_wrap">
+                                                <span>출력개수</span>
+                                                <select class="select_sm" data-trigger="" name="select_01"
+                                                    id="select_01">
+                                                    <option value="10">10개씩 보기</option>
+                                                    <option value="20" selected>20개</option>
+                                                    <option value="50">50개</option>
+                                                    <option value="100">100개</option>
+                                                    <option value="200">200개</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="main_table">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>CCTV 설치 장소명</th>
+                                                        <th>경도</th>
+                                                        <th>위도</th>
+                                                        <th>미리보기</th>
+                                                        <th>모듈 ID</th>
+                                                        <th>타깃 ID</th>
+                                                        <th>타깃 설정</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>[수도권제1순환실] 성남</td>
+                                                        <td>127.12361</td>
+                                                        <td>37.42889</td>
+                                                        <td>
+                                                            <button>
+                                                                <img src="styles/img/icons/cctv.svg" alt="no" style="width:35px; margin-left:-5px;"/>
+                                                            </button>
+                                                        </td>
+                                                        <td>
+                                                            -
+                                                        </td>
+                                                        <td>-</td>
+                                                        <td><button>
+                                                               <img src="styles/img/icons/target_1.svg" alt="no"/>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>[수도권제1순환실] 성남</td>
+                                                        <td>127.12361</td>
+                                                        <td>37.42889</td>
+                                                        <td>
+                                                            <button>
+                                                                <img src="styles/img/icons/cctv.svg" alt="no" style="width:35px; margin-left:-5px;"/>
+                                                                </button>
+                                                        </td>
+                                                        <td>
+                                                            -
+                                                        </td>
+                                                        <td>-</td>
+                                                        <td><button>
+                                                            <img src="styles/img/icons/target_2.svg" alt="no"/></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>[수도권제1순환실] 성남</td>
+                                                        <td>127.12361</td>
+                                                        <td>37.42889</td>
+                                                        <td>
+                                                            <button>
+                                                                <img src="styles/img/icons/cctv.svg" alt="no" style="width:35px; margin-left:-5px;"/>
+                                                            </button>
+                                                        </td>
+                                                        <td>
+                                                            -
+                                                        </td>
+                                                        <td>-</td>
+                                                        <td><button
+                                                                >  <img src="styles/img/icons/target_3.svg" alt="no"/></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>[수도권제1순환실] 성남</td>
+                                                        <td>127.12361</td>
+                                                        <td>37.42889</td>
+                                                        <td>
+                                                            <button>
+                                                                <img src="styles/img/icons/cctv.svg" alt="no" style="width:35px; margin-left:-5px;"/>
+                                                            </button>
+                                                        </td>
+                                                        <td>
+                                                            -
+                                                        </td>
+                                                        <td>-</td>
+                                                        <td><button
+                                                               >  <img src="styles/img/icons/target_4.svg" alt="no"/></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>[수도권제1순환실] 성남</td>
+                                                        <td>127.12361</td>
+                                                        <td>37.42889</td>
+                                                        <td>
+                                                            <button>
+                                                                <img src="styles/img/icons/cctv.svg" alt="no" style="width:35px; margin-left:-5px;"/>
+                                                            </button>
+                                                        </td>
+                                                        <td>
+                                                            -
+                                                        </td>
+                                                        <td>-</td>
+                                                        <td><button
+                                                           >  <img src="styles/img/icons/target_5.svg" alt="no"/></button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    @@include('../include/pagenation.html')
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+            </main>
+
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="js/app.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

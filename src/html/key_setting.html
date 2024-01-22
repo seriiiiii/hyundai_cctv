@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('../include/head.html')
+</head>
+<body>
+	@@include('../include/header.html')
+	<div class="wrapper">
+		@@include('../include/nav.html')
+		<div class="main">
+			
+			<div class="sub_nav">
+				<a>설정</a> > <a class="current">API 키 설정 관리</a>
+			</div>
+			<main class="content">
+				<div class="container-fluid p-0">
+					<h1>API 키 설정 관리</h1>
+					<div class="row">
+						<h2>API 키 리스트</h2>
+						<div class="col-12">
+							<section class="main_section">
+								<div class="section_body">
+									<div class="table_area">
+										<div class="filter_area">
+											<div class="table_length">
+												총 <span>3</span> 건
+											</div>
+											<div class="table_action_wrap">
+												<button  class="btn btn_primary" onClick="userAdd()">추가</button>
+												<span>출력개수</span>
+												<select data-trigger="" name="select_01"
+													id="select_01">
+													<option value="10">10개</option>
+													<option value="20" selected>20개</option>
+													<option value="50">50개</option>
+													<option value="100">100개</option>
+													<option value="200">200개</option>
+												</select>
+											</div>
+										</div>
+										<div class="main_table">
+											<table id="userList">
+												<thead>
+													<tr>
+														<th>ID</th>
+														<th>Value</th>
+														<th>모듈 ID</th>
+														<th>Description</th>
+														<th>수정</th>
+														<th>삭제</th>
+													</tr>
+												</thead>
+												<tbody id="tbHead">
+													<tr id="no2">
+														<td>1
+														</td>
+														<td>TwY1vGXCbpGFtclUywf8UoVvmVLXPt
+														</td>
+														<td>M0001</td>
+														<td id="USER">Open API Key 1
+														</td>
+														<td>
+															<button
+																data-modal-btn="product_setting_modal">
+																<svg width="22" height="22" viewBox="0 0 22 22"
+																	fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path
+																		d="M10.0984 2.80369H4.4119C2.52756 2.80369 1 4.3312 1 6.21548V17.5882C1 19.4725 2.52756 21 4.4119 21H15.7849C17.6692 21 19.1968 19.4725 19.1968 17.5882L19.1968 11.9018M6.68649 15.3136L10.8244 14.4799C11.044 14.4356 11.2457 14.3274 11.4041 14.1689L20.6671 4.90116C21.1112 4.45682 21.1109 3.73657 20.6664 3.2926L18.7042 1.33264C18.2599 0.888856 17.54 0.889158 17.0961 1.33332L7.8321 10.6021C7.674 10.7602 7.56605 10.9615 7.52175 11.1807L6.68649 15.3136Z"
+																		stroke="black" stroke-width="2"
+																		stroke-linecap="round"
+																		stroke-linejoin="round" />
+																</svg>
+															</button>
+														</td>
+														<td>
+															<button
+																data-modal-btn="product_setting_modal">
+																<svg width="20" height="22" viewBox="0 0 18 20"
+																	fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path
+																		d="M1 4.17647H17M7 14.7647V8.41177M11 14.7647V8.41177M13 19H5C3.89543 19 3 18.0519 3 16.8824V5.23529C3 4.65052 3.44772 4.17647 4 4.17647H14C14.5523 4.17647 15 4.65052 15 5.23529V16.8824C15 18.0519 14.1046 19 13 19ZM7 4.17647H11C11.5523 4.17647 12 3.70242 12 3.11765V2.05882C12 1.47405 11.5523 1 11 1H7C6.44772 1 6 1.47405 6 2.05882V3.11765C6 3.70242 6.44772 4.17647 7 4.17647Z"
+																		stroke="black" stroke-width="2"
+																		stroke-linecap="round"
+																		stroke-linejoin="round" />
+																</svg>
+															</button>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+
+									@@include('../include/pagenation.html')
+								</div>
+							</section>
+						</div>
+					</div>
+			</main>
+
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+	<script src="https://unpkg.com/tippy.js@6"></script>
+	<script src="js/app.js"></script>
+	<script src="js/common.js"></script>
+</body>
+
+</html>

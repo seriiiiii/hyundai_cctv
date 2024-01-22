@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('../include/head.html')
+</head>
+<body>
+	@@include('../include/header.html')
+	<div class="wrapper">
+		@@include('../include/nav.html')
+
+        <div class="main">
+            <div class="sub_nav">
+                <a>관리자 설정 > <a class="current">회원정보 조회</a>
+            </div>
+            <main class="content admin_content">
+                <div class="container-fluid p-0">
+                    <h1>CCTV 리스트 조회</h1>
+                    <div class="form_group_wrap">
+                        <h2>조회조건</h2>
+                            <div class="section_body">
+                                <div class="form-horizontal">
+                                    <div class="form_group">
+                                        <div class="form_label essential col-2">
+                                            <label>회원 구분</label>
+                                        </div>
+                                        <div class="form_input col-10">
+                                            <div class="form_label essential col-2">
+                                                <button class="form_btn">일반 관리자</button>
+                                                <button class="form_btn">통합 관리자</button>
+                                              </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="form_group">
+                                        <div class="form_label essential col-2">
+                                            <label>회원 상태</label>
+                                        </div>
+                                        <div class="form_input col-10">
+                                            <div class="form_label essential col-2">
+                                                <button class="form_btn">정상</button>
+                                                <button class="form_btn">정지</button>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    <div class="form_group">
+                                        <div class="filter_wrap">
+                                            <div class="form_label essential col-2">
+                                                <label>회원 검색</label>
+                                            </div>
+                                            <div class="filter_wrap">
+                                                <svg viewBox="0 0 24 24" width="16" height="16"
+                                                    fill="currentColor">
+                                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                                    <path
+                                                        d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z">
+                                                    </path>
+                                                </svg>
+                                                <input type="search" autocomplete="off"
+                                                    placeholder="회원명, 회원아이디를 입력하세요">
+                                                <button class="btn_search" disabled>검색</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="form_group_wrap">
+                        <h2>조회결과</h2>
+                                <div class="section_body">
+                                    <div class="table_area">
+                                        <div class="filter_area">
+                                            <div class="table_length">
+                                                총 <span>35</span> 건
+                                            </div>
+                                            <div class="table_action_wrap">
+                                                <span>출력개수</span>
+                                                <select data-trigger="" name="select_01"
+                                                    id="select_01">
+                                                    <option value="10">10개씩 보기</option>
+                                                    <option value="20" selected>20개</option>
+                                                    <option value="50">50개</option>
+                                                    <option value="100">100개</option>
+                                                    <option value="200">200개</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="main_table">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>회원구분</th>
+                                                        <th>가입일자</th>
+                                                        <th>회원명</th>
+                                                        <th>회원아이디</th>
+                                                        <th>회원상태</th>
+                                                        <th>차단여부</th>
+
+                                                    </tr>
+                                                </thead>
+                                                <colgroup>
+                                                    <col width="16%"/>
+                                                    <col width="16%"/>
+                                                    <col width="16%"/>
+                                                    <col width="16%"/>
+                                                    <col width="16%"/>
+                                                    <col width="16%"/>
+                                            </colgroup>  
+                                                <tbody>
+                                                    <tr>
+                                                        <td>일반관리자</td>
+                                                        <td>2022-01-11</td>
+                                                        <td>현대인</td>
+                                                        <td>
+                                                            friya
+                                                        </td>
+                                                        <td>
+                                                            정상
+                                                        </td>
+                                                        <td>N</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>일반관리자</td>
+                                                        <td>2022-01-10</td>
+                                                        <td>현대맨</td>
+                                                        <td>
+                                                            mashabb
+                                                        </td>
+                                                        <td>
+                                                            정상
+                                                        </td>
+                                                        <td>Y</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>...</td>
+                                                        <td>...</td>
+                                                        <td>...</td>
+                                                        <td>
+                                                            ...
+                                                        </td>
+                                                        <td>
+                                                            ...
+                                                        </td>
+                                                        <td>...</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>통합관리자</td>
+                                                        <td>2022-01-02</td>
+                                                        <td>홍길동</td>
+                                                        <td>
+                                                            elly0103
+                                                        </td>
+                                                        <td>
+                                                            정상
+                                                        </td>
+                                                        <td>N</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <tr>
+                                                        <td>일반관리자</td>
+                                                        <td>2022-12-23</td>
+                                                        <td>방송맨</td>
+                                                        <td>
+                                                            park
+                                                        </td>
+                                                        <td>
+                                                            정지
+                                                        </td>
+                                                        <td>N</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    @@include('../include/pagenation.html')
+                                  
+                                </div>
+                    </div>
+            </main>
+
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="js/app.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

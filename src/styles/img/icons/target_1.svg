@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_레이어_2" data-name="레이어 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.95 48.95">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #002c5f;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        stroke: #ff9100;
+      }
+    </style>
+  </defs>
+  <g id="Layer_5" data-name="Layer 5">
+    <g>
+      <g>
+        <polyline class="cls-1" points="12.99 1.5 1.5 1.5 1.5 12.99"/>
+        <polyline class="cls-1" points="1.5 35.96 1.5 47.45 12.99 47.45"/>
+        <polyline class="cls-1" points="47.45 12.99 47.45 1.5 35.97 1.5"/>
+        <polyline class="cls-1" points="35.97 47.45 47.45 47.45 47.45 35.96"/>
+      </g>
+      <g>
+        <polygon class="cls-1" points="24.48 10.85 12.68 17.66 24.48 24.48 36.28 17.66 24.48 10.85"/>
+        <polygon class="cls-1" points="36.28 17.66 24.48 24.48 24.48 38.1 36.28 31.29 36.28 31.29 36.28 17.66 36.28 17.66"/>
+        <polygon class="cls-1" points="12.68 17.66 12.68 31.29 24.48 38.1 24.48 24.48 12.68 17.66"/>
+      </g>
+    </g>
+    <g>
+      <polyline class="cls-1" points="12.99 1.5 1.5 1.5 1.5 12.99"/>
+      <polyline class="cls-1" points="1.5 35.96 1.5 47.45 12.99 47.45"/>
+      <polyline class="cls-1" points="47.45 12.99 47.45 1.5 35.97 1.5"/>
+      <polyline class="cls-1" points="35.97 47.45 47.45 47.45 47.45 35.96"/>
+    </g>
+    <g>
+      <polygon class="cls-2" points="24.48 10.85 12.68 17.66 24.48 24.48 36.28 17.66 24.48 10.85"/>
+      <polygon class="cls-2" points="36.28 17.66 24.48 24.48 24.48 38.1 36.28 31.29 36.28 31.29 36.28 17.66 36.28 17.66"/>
+      <polygon class="cls-2" points="12.68 17.66 12.68 31.29 24.48 38.1 24.48 24.48 12.68 17.66"/>
+    </g>
+  </g>
+</svg>

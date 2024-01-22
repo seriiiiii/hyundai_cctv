@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_레이어_2" data-name="레이어 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.33 48.33">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #002c5f;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        stroke: #ff9100;
+      }
+    </style>
+  </defs>
+  <g id="Layer_5" data-name="Layer 5">
+    <g>
+      <path class="cls-1" d="M6.65,1.5C3.81,1.5,1.5,3.81,1.5,6.65v15.45L22.11,1.5H6.65Z"/>
+      <path class="cls-1" d="M12.49,46.83h29.19c2.85,0,5.15-2.31,5.15-5.15V12.49L12.49,46.83Z"/>
+      <path class="cls-1" d="M46.83,12.49v-5.84c0-2.85-2.31-5.15-5.15-5.15h-19.58l-5.84,5.84,17.86,17.86,12.71-12.71Z"/>
+      <path class="cls-1" d="M16.27,7.34L1.5,22.11v19.58c0,2.84,2.31,5.15,5.15,5.15h5.84l21.64-21.64L16.27,7.34Z"/>
+      <path class="cls-2" d="M18.67,26.91c0,2.28-1.85,4.12-4.12,4.12s-4.12-1.85-4.12-4.12,1.85-4.12,4.12-4.12,4.12,1.85,4.12,4.12Z"/>
+    </g>
+  </g>
+</svg>
